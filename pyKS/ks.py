@@ -1,63 +1,43 @@
-'''Models for predicting 30-year mortgage rates.'''
+'''Calculation KS statistic for a model.'''
 
-import warnings
-warnings.filterwarnings("ignore")
-import statsmodels.api as sm
 import pandas as pd
+import numpy as np
 
-from .utils import compute_margin
+def summary(df, n_group = 10):
+    '''Calculation KS statistic
+    Inspired by one WenSui Liu's blog at 
+    https://statcompute.wordpress.com/2012/11/18/calculating-k-s-statistic-with-python/
 
-class MortgageRateModel(object):
-    '''A 12-order autoregressive model to predict mortgage rates.
+    Parmaters
+    ---------
+    df: pandas.DataFrame
+        with M x N size.
+        M length is the number of bins.
+        N measures the number of metrics related to KS.
+    n_group: float
+             The number of cutted groups.
 
-       Paramters
-       ---------
-       mortgage_rates: Pandas Series with DateTimeIndex
-         The monthly mortgage rate to fit
-         a 12-order autoregressive model.'''
+    Returns
+    -------
+    agg2  : The DataFrame return with KS and related metrics.'''
 
-    def __init__(self, mortgage_rates):
-        '''Initialize and fit the model.'''
-        self.mortgage_rates = mortgage_rates
-        self._model = sm.tsa.SARIMAX(mortgage_rates, order=(12, 0,0))
-        self.fit()
+    df["bad"] = 1 - df.good
+    df['bucket'] = pd.qcut(df.score, n_group, duplicates = 'drop')
 
-    def fit(self, *args, **kwargs):
-        '''Fit the model
+    grouped = df.groupby('bucket', as_index = False)
 
-        Parameters
-        ----------
-        All parameters are passed to the statsmodels
-        SARIMAX fit() member method.
-        If disp is not passed it is set to False.'''
+    agg1 = pd.DataFrame()
+    agg1['min_scr'] = grouped.min().score
+    agg1['max_scr'] = grouped.max().score
+    agg1['bads'] = grouped.sum().bad
+    agg1['goods'] = grouped.sum().good
+    agg1['total'] = agg1.bads + agg1.goods
 
-        if 'disp' not in kwargs:
-            kwargs['disp'] = False
-
-        self.model = self._model.fit(*args, **kwargs)
-
-    def forecast(self, month, confint=0.95):
-        '''Forecast the 30-year mortgage rate over the given month.
-
-        Parmaters
-        ---------
-        month: str
-               Parsible month-year to forecast
-        confint: float (<= 1)
-                 Confidence interval to compute
-                 margin of error
-
-        Returns
-        -------
-        rate  : The forecasted mortgage rate
-        margin: The margin of error'''
-
-        last_known = self.mortgage_rates.index[-1]
-        if pd.to_datetime(month) < pd.to_datetime(last_known):
-            raise ValueError('The month to predict must be after {}' \
-                              .format(last_known.strftime('%B %Y')))
-
-        forecast = self.model.get_prediction(last_known, month, confint=confint)
-        rate = forecast.predicted_mean.values[-1]
-        margin = compute_margin(forecast.se_mean.values[-1], confint)
-        return rate, margin
+    agg2 = (agg1.sort_values(by = 'min_scr')).reset_index(drop = True)
+    agg2['odds'] = (agg2.goods / agg2.bads).apply('{0:.2f}'.format)
+    agg2['bad_rate'] = (agg2.bads / agg2.total).apply('{0:.2%}'.format)
+    agg2['ks'] = np.round(((agg2.bads / df.bad.sum()).cumsum() - (agg2.goods / df.good.sum()).cumsum()), 4) * 100
+    flag = lambda x: '<----' if x == agg2.ks.max() else ''
+    agg2['max_ks'] = agg2.ks.apply(flag)
+    
+    return agg2
