@@ -13,30 +13,30 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# pyKS
+# pyks
 
 <!-- badges: start -->
-[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/version.svg)](https://anaconda.org/jiaxiangbu/pyKS)
-[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/latest_release_date.svg)](https://anaconda.org/jiaxiangbu/pyKS)
-[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/platforms.svg)](https://anaconda.org/jiaxiangbu/pyKS)
-[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/license.svg)](https://anaconda.org/jiaxiangbu/pyKS)
-[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/downloads.svg)](https://anaconda.org/jiaxiangbu/pyKS)
-[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/installer/conda.svg)](https://conda.anaconda.org/jiaxiangbu)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyks/badges/version.svg)](https://anaconda.org/jiaxiangbu/pyks)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyks/badges/latest_release_date.svg)](https://anaconda.org/jiaxiangbu/pyks)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyks/badges/platforms.svg)](https://anaconda.org/jiaxiangbu/pyks)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyks/badges/license.svg)](https://anaconda.org/jiaxiangbu/pyks)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyks/badges/downloads.svg)](https://anaconda.org/jiaxiangbu/pyks)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyks/badges/installer/conda.svg)](https://conda.anaconda.org/jiaxiangbu)
 <!-- badges: end -->
 
-The goal of `pyKS` is to make a miniaml example to build a Python package. I learn it from @Albert_DeFusco2019.
+The goal of `pyks` is to make a miniaml example to build a Python package. I learn it from @Albert_DeFusco2019.
 The sample data is downloaded from @MORTGAGE30US.
 
 ## Installation
 
-You can install the released version of `pyKS` from [Anaconda Cloud](https://anaconda.org/JiaxiangBU/pyKS) with:
+You can install the released version of `pyks` from [Anaconda Cloud](https://anaconda.org/JiaxiangBU/pyks) with:
 
 ```conda
-conda install -c jiaxiangbu pyKS 
+conda install -c jiaxiangbu pyks 
 ```
 
 or the development version from [GitHub](https://github.com/) with:
 
 ```conda
-pip install git+https://github.com/JiaxiangBU/pyKS
+pip install git+https://github.com/JiaxiangBU/pyks
 ```
