@@ -1,6 +1,5 @@
 ---
 output: github_document
-bibliography: ../learn_dev_py_pkg/refs/add.bib
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -24,8 +23,7 @@ knitr::opts_chunk$set(
 [![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyks/badges/installer/conda.svg)](https://conda.anaconda.org/jiaxiangbu)
 <!-- badges: end -->
 
-The goal of `pyks` is to make a miniaml example to build a Python package. I learn it from @Albert_DeFusco2019.
-The sample data is downloaded from @MORTGAGE30US.
+The goal of `pyks` is to help do calculation KS statistic for a model.
 
 ## Installation
 
