@@ -1,0 +1,42 @@
+---
+output: github_document
+bibliography: ../learn_dev_py_pkg/refs/add.bib
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# pyKS
+
+<!-- badges: start -->
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/version.svg)](https://anaconda.org/jiaxiangbu/pyKS)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/latest_release_date.svg)](https://anaconda.org/jiaxiangbu/pyKS)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/platforms.svg)](https://anaconda.org/jiaxiangbu/pyKS)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/license.svg)](https://anaconda.org/jiaxiangbu/pyKS)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/downloads.svg)](https://anaconda.org/jiaxiangbu/pyKS)
+[![Anaconda-Server Badge](https://anaconda.org/jiaxiangbu/pyKS/badges/installer/conda.svg)](https://conda.anaconda.org/jiaxiangbu)
+<!-- badges: end -->
+
+The goal of `pyKS` is to make a miniaml example to build a Python package. I learn it from @Albert_DeFusco2019.
+The sample data is downloaded from @MORTGAGE30US.
+
+## Installation
+
+You can install the released version of `pyKS` from [Anaconda Cloud](https://anaconda.org/JiaxiangBU/pyKS) with:
+
+```conda
+conda install -c jiaxiangbu pyKS 
+```
+
+or the development version from [GitHub](https://github.com/) with:
+
+```conda
+pip install git+https://github.com/JiaxiangBU/pyKS
+```
