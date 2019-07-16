@@ -20,6 +20,8 @@ Badge](https://anaconda.org/jiaxiangbu/pyks/badges/installer/conda.svg)](https:/
 <!-- badges: end -->
 
 The goal of `pyks` is to help do calculation KS statistic for a model.
+The R version [rawKS](https://github.com/JiaxiangBU/rawKS) is hosted
+from GitHub.
 
 ## Installation
 
