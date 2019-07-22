@@ -22,3 +22,7 @@ read_file("README.Rmd") %>% str_replace_all("mortgage_forecasts", package_name) 
 
 file.edit("pyks/ks.py")
 
+
+# ks v2 -------------------------------------------------------------------
+
+file.copy("pyks/ks.py", "pyks/ks2.py")
