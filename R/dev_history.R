@@ -65,3 +65,5 @@ version_text <- read_lines("DESCRIPTION") %>%
 init_file <- read_lines("pyks/__init__.py")
 init_file[init_file %>% str_which("__version__")] <- glue("__version__ = '{version_text}'")
 init_file %>% write_lines("pyks/__init__.py")
+
+
