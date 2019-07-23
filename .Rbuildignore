@@ -1,1 +1,4 @@
 ^README\.Rmd$
+^pyks\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$

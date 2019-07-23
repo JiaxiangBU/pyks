@@ -1,5 +1,6 @@
 file.copy("../mortgage_forecasts/LICENSE", ".")
 package_name <- "pyks"
+library(tidyverse)
 
 # once --------------------------------------------------------------------
 
@@ -14,7 +15,6 @@ file.edit("pyks/__init__.py")
 use_readme_rmd()
 file.copy("../mortgage_forecasts/README.Rmd", "README.Rmd", overwrite = TRUE)
 
-library(tidyverse)
 read_file("README.Rmd") %>% str_replace_all("mortgage_forecasts", package_name) %>% write_file("README.Rmd")
 
 
@@ -26,3 +26,27 @@ file.edit("pyks/ks.py")
 # ks v2 -------------------------------------------------------------------
 
 file.copy("pyks/ks.py", "pyks/ks2.py")
+
+
+# Add DESC ----------------------------------------------------------------
+
+library(glue)
+
+desc_text <- read_lines("setup.py") %>%
+    str_subset("description") %>%
+    str_match("'([[A-z]\\s]+)'") %>%
+    .[1,2]
+desc_file <- read_lines("DESCRIPTION")
+desc_file[desc_file %>% str_which("Title")] <- glue("Title: {desc_text}")
+desc_file[desc_file %>% str_which("Description")] <- glue("Title: {desc_text}")
+desc_file %>%
+    write_lines("DESCRIPTION")
+
+add2pkg::add_me()
+
+options(usethis.full_name = "Jiaxiang Li")
+use_mit_license()
+
+# 所以还是要用 R Package 的框架
+
+use_news_md()
