@@ -38,7 +38,7 @@ desc_text <- read_lines("setup.py") %>%
     .[1,2]
 desc_file <- read_lines("DESCRIPTION")
 desc_file[desc_file %>% str_which("Title")] <- glue("Title: {desc_text}")
-desc_file[desc_file %>% str_which("Description")] <- glue("Title: {desc_text}")
+desc_file[desc_file %>% str_which("Description")] <- glue("Description: {desc_text}")
 desc_file %>%
     write_lines("DESCRIPTION")
 
