@@ -1,3 +1,5 @@
+# pyks 0.1.1
+
 * Added module `ks2.plot` to summarise KS statistic in a figure
 
 # pyks 0.1.0
