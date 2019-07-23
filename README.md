@@ -17,6 +17,7 @@ Badge](https://anaconda.org/jiaxiangbu/pyks/badges/license.svg)](https://anacond
 Badge](https://anaconda.org/jiaxiangbu/pyks/badges/downloads.svg)](https://anaconda.org/jiaxiangbu/pyks)
 [![Anaconda-Server
 Badge](https://anaconda.org/jiaxiangbu/pyks/badges/installer/conda.svg)](https://conda.anaconda.org/jiaxiangbu)
+[![DOI](https://zenodo.org/badge/197245838.svg)](https://zenodo.org/badge/latestdoi/197245838)
 <!-- badges: end -->
 
 The goal of `pyks` is to help do calculation KS statistic for a model.
@@ -37,3 +38,5 @@ or the development version from [GitHub](https://github.com/) with:
 ``` conda
 pip install git+https://github.com/JiaxiangBU/pyks
 ```
+
+## Examples
