@@ -2,5 +2,5 @@
 from .ks import summary
 from .ks2 import plot
 
-__version__ = '1.0.0'
+__version__ = '0.1.1'
 
