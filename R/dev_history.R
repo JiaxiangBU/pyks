@@ -1,6 +1,7 @@
 file.copy("../mortgage_forecasts/LICENSE", ".")
 package_name <- "pyks"
 library(tidyverse)
+library(glue)
 
 # once --------------------------------------------------------------------
 
@@ -30,7 +31,7 @@ file.copy("pyks/ks.py", "pyks/ks2.py")
 
 # Add DESC ----------------------------------------------------------------
 
-library(glue)
+
 
 desc_text <- read_lines("setup.py") %>%
     str_subset("description") %>%
@@ -51,4 +52,16 @@ use_mit_license()
 
 use_news_md()
 
+
+
+# update version ----------------------------------------------------------
+
 use_version()
+
+version_text <- read_lines("DESCRIPTION") %>%
+    str_subset("Version") %>%
+    str_match("(\\d+\\.\\d+\\.\\d+)") %>%
+    .[1,2]
+init_file <- read_lines("pyks/__init__.py")
+init_file[init_file %>% str_which("__version__")] <- glue("__version__ = '{version_text}'")
+init_file %>% write_lines("pyks/__init__.py")
