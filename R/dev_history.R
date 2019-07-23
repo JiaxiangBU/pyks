@@ -50,3 +50,5 @@ use_mit_license()
 # 所以还是要用 R Package 的框架
 
 use_news_md()
+
+use_version()
