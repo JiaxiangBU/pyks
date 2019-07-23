@@ -67,3 +67,9 @@ init_file[init_file %>% str_which("__version__")] <- glue("__version__ = '{versi
 init_file %>% write_lines("pyks/__init__.py")
 
 
+# build -------------------------------------------------------------------
+
+# conda build . # conda
+usethis::use_github_release() # Use MacOS
+
+
