@@ -56,6 +56,8 @@ use_news_md()
 
 # update version ----------------------------------------------------------
 
+file.edit("NEWS.md")
+library(devtools)
 use_version()
 
 version_text <- read_lines("DESCRIPTION") %>%

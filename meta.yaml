@@ -17,7 +17,7 @@ requirements:
         - pandas >=0.20
         - numpy
         - matplotlib
-        - sklearn
+        - scikit-learn
     build:
         - python
         - setuptools
