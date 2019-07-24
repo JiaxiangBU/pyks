@@ -43,3 +43,8 @@ pip install git+https://github.com/JiaxiangBU/pyks
 ## Examples
 
 
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+root_path <- "https://nbviewer.jupyter.org/urls/jiaxiangbu.github.io/pyks"
+glue::glue('1. [examples1.ipynb]({file.path(root_path, "examples1.ipynb")})')
+glue::glue('1. [examples2.ipynb]({file.path(root_path, "examples2.ipynb")})')
+```

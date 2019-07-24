@@ -33,10 +33,14 @@ Cloud](https://anaconda.org/JiaxiangBU/pyks) with:
 conda install -c jiaxiangbu pyks 
 ```
 
-or the development version from [GitHub](https://github.com/) with:
+or the development version from [GitHub](https://github.com/)
+    with:
 
 ``` conda
 pip install git+https://github.com/JiaxiangBU/pyks
 ```
 
 ## Examples
+
+1.  [examples1.ipynb](https://nbviewer.jupyter.org/urls/jiaxiangbu.github.io/pyks/examples1.ipynb)
+2.  [examples2.ipynb](https://nbviewer.jupyter.org/urls/jiaxiangbu.github.io/pyks/examples2.ipynb)
