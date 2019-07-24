@@ -74,4 +74,10 @@ init_file %>% write_lines("pyks/__init__.py")
 # conda build . # conda
 usethis::use_github_release() # Use MacOS
 
+# /Users/vija/miniconda3/conda-bld/noarch/
+# pyks-0.1.1-py_1.tar.bz2
+# 版本不对
+
+# anaconda login
+# anaconda upload /Users/vija/miniconda3/conda-bld/noarch/pyks-0.1.2-py_1.tar.bz2
 
