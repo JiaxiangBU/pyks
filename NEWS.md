@@ -1,3 +1,5 @@
+* Released on the PyPi.
+
 # pyks 1.1.2
 
 * Updated version management.
