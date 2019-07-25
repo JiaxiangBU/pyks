@@ -69,24 +69,31 @@ init_file[init_file %>% str_which("__version__")] <- glue("__version__ = '{versi
 init_file %>% write_lines("pyks/__init__.py")
 
 
-# build -------------------------------------------------------------------
+
+
+# release on Anaconda -----------------------------------------------------
 
 # conda build . # conda
-usethis::use_github_release() # Use MacOS
 
-# /Users/vija/miniconda3/conda-bld/noarch/
-# pyks-0.1.1-py_1.tar.bz2
-# 版本不对
 library(fs)
+conda_bld_path <- if(sessioninfo::os_name() %>% str_detect("Windows")) {
+    "../../software/anaconda/envs/base-37/conda-bld/noarch/"
+} else {
+    "/Users/vija/miniconda3/conda-bld/noarch/"
+}
 upload_file_path <-
-dir_info("/Users/vija/miniconda3/conda-bld/noarch/")$path %>%
+dir_info(conda_bld_path)$path %>%
     str_subset("pyks") %>%
     max
+
 # anaconda login
 
 glue("anaconda upload {upload_file_path}") %>% clipr::write_clip() %>% cat
 
-# pypi --------------------------------------------------------------------
+
+# release on PyPi ---------------------------------------------------------
+
+
 # Python Package Index
 
 # https://packaging.python.org/tutorials/packaging-projects/
@@ -102,3 +109,8 @@ file.edit("pyks/__init__.py")
 # python -m pip install --user --upgrade twine
 # python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/* --verbose
 # python -m twine upload dist/*
+
+
+# release on GitHub -------------------------------------------------------
+
+usethis::use_github_release() # Use MacOS

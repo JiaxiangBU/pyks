@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pyks
-Version: 1.1.2
+Version: 1.1.3
 Summary: Calculate KS for models
 Home-page: https://github.com/JiaxiangBU/pyks
 Author: Jiaxiang Li
@@ -26,6 +26,8 @@ Description:
         [![Anaconda-Server
         Badge](https://anaconda.org/jiaxiangbu/pyks/badges/installer/conda.svg)](https://conda.anaconda.org/jiaxiangbu)
         [![DOI](https://zenodo.org/badge/197245838.svg)](https://zenodo.org/badge/latestdoi/197245838)
+        [![PyPI
+        version](https://badge.fury.io/py/pyks.svg)](https://badge.fury.io/py/pyks)
         <!-- badges: end -->
         
         The goal of `pyks` is to help do calculation KS statistic for a model.
@@ -39,6 +41,13 @@ Description:
         
         ``` conda
         conda install -c jiaxiangbu pyks 
+        ```
+        
+        or the released version of `pyks` from [Python Package
+        Index](https://pypi.org/project/pyks/) with:
+        
+        ``` conda
+        pip install pyks
         ```
         
         or the development version from [GitHub](https://github.com/)
