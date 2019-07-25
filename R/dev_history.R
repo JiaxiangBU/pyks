@@ -32,9 +32,9 @@ file.copy("pyks/ks.py", "pyks/ks2.py")
 # Add DESC ----------------------------------------------------------------
 
 
-
+file.edit("setup.py")
 desc_text <- read_lines("setup.py") %>%
-    str_subset("description") %>%
+    str_subset("\\sdescription") %>%
     str_match("'([[A-z]\\s]+)'") %>%
     .[1,2]
 desc_file <- read_lines("DESCRIPTION")

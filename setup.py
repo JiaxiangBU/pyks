@@ -8,7 +8,7 @@ setup(
         name = 'pyks',
         author = 'Jiaxiang Li',
         author_email = 'alex.lijiaxiang@foxmail.com',
-        description = 'Calculate KS for models',
+        description = 'Calculate KS statistic for models',
         long_description=long_description,
         long_description_content_type="text/markdown",
         url="https://github.com/JiaxiangBU/pyks",
