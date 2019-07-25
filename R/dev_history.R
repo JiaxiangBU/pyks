@@ -56,6 +56,8 @@ use_news_md()
 
 # update version ----------------------------------------------------------
 
+file.edit("NEWS.md")
+library(devtools)
 use_version()
 
 version_text <- read_lines("DESCRIPTION") %>%
@@ -72,7 +74,17 @@ init_file %>% write_lines("pyks/__init__.py")
 # conda build . # conda
 usethis::use_github_release() # Use MacOS
 
+# /Users/vija/miniconda3/conda-bld/noarch/
+# pyks-0.1.1-py_1.tar.bz2
+# 版本不对
+library(fs)
+upload_file_path <-
+dir_info("/Users/vija/miniconda3/conda-bld/noarch/")$path %>%
+    str_subset("pyks") %>%
+    max
+# anaconda login
 
+glue("anaconda upload {upload_file_path}") %>% clipr::write_clip() %>% cat
 
 # pypi --------------------------------------------------------------------
 # Python Package Index
@@ -89,5 +101,4 @@ file.edit("pyks/__init__.py")
 
 # python -m pip install --user --upgrade twine
 # python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/* --verbose
-
 

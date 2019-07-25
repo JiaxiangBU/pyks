@@ -1,8 +1,16 @@
-# pyks 0.1.1
+# pyks 1.1.2
+
+* Updated version management.
+
+# pyks 1.1.1
+
+* Updated the dependencies.
+
+# pyks 1.1.0
 
 * Added module `ks2.plot` to summarise KS statistic in a figure
 
-# pyks 0.1.0
+# pyks 1.0.0
 
 * Added module `ks.summary` to summarise KS statistic in a table
 
