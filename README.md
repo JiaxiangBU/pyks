@@ -18,6 +18,8 @@ Badge](https://anaconda.org/jiaxiangbu/pyks/badges/downloads.svg)](https://anaco
 [![Anaconda-Server
 Badge](https://anaconda.org/jiaxiangbu/pyks/badges/installer/conda.svg)](https://conda.anaconda.org/jiaxiangbu)
 [![DOI](https://zenodo.org/badge/197245838.svg)](https://zenodo.org/badge/latestdoi/197245838)
+[![PyPI
+version](https://badge.fury.io/py/pyks.svg)](https://badge.fury.io/py/pyks)
 <!-- badges: end -->
 
 The goal of `pyks` is to help do calculation KS statistic for a model.
