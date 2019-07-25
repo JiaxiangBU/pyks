@@ -77,7 +77,12 @@ usethis::use_github_release() # Use MacOS
 # /Users/vija/miniconda3/conda-bld/noarch/
 # pyks-0.1.1-py_1.tar.bz2
 # 版本不对
+library(fs)
+upload_file_path <-
+dir_info("/Users/vija/miniconda3/conda-bld/noarch/")$path %>%
+    str_subset("pyks") %>%
+    max
 
 # anaconda login
-# anaconda upload /Users/vija/miniconda3/conda-bld/noarch/pyks-0.1.2-py_1.tar.bz2
 
+glue("anaconda upload {upload_file_path}") %>% clipr::write_clip() %>% cat
