@@ -1,3 +1,5 @@
+# pyks 1.1.2
+
 * Updated version management.
 
 # pyks 1.1.1
