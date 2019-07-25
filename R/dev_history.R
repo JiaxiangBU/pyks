@@ -73,3 +73,21 @@ init_file %>% write_lines("pyks/__init__.py")
 usethis::use_github_release() # Use MacOS
 
 
+
+# pypi --------------------------------------------------------------------
+# Python Package Index
+
+# https://packaging.python.org/tutorials/packaging-projects/
+file.edit("setup.py")
+file.edit("pyks/__init__.py")
+# python -m pip install --user --upgrade setuptools wheel
+# Successfully installed wheel-0.33.4
+# python setup.py sdist bdist_wheel
+
+# $ ls dist
+# pyks-0.1.1-py3-none-any.whl  pyks-0.1.1.tar.gz
+
+# python -m pip install --user --upgrade twine
+# python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/* --verbose
+
+
