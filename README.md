@@ -33,6 +33,13 @@ Cloud](https://anaconda.org/JiaxiangBU/pyks) with:
 conda install -c jiaxiangbu pyks 
 ```
 
+or the released version of `pyks` from [Python Package
+Index](https://pypi.org/project/pyks/) with:
+
+``` conda
+pip install pyks
+```
+
 or the development version from [GitHub](https://github.com/)
     with:
 

@@ -101,4 +101,4 @@ file.edit("pyks/__init__.py")
 
 # python -m pip install --user --upgrade twine
 # python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/* --verbose
-
+# python -m twine upload dist/*
