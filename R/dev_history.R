@@ -77,7 +77,8 @@ init_file %>% write_lines("pyks/__init__.py")
 
 library(fs)
 conda_bld_path <- if(sessioninfo::os_name() %>% str_detect("Windows")) {
-    "../../software/anaconda/envs/base-37/conda-bld/noarch/"
+    # "../../software/anaconda/envs/base-37/conda-bld/noarch/"
+    "../../install/miniconda/conda-bld/noarch/"
 } else {
     "/Users/vija/miniconda3/conda-bld/noarch/"
 }
