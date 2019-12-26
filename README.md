@@ -42,17 +42,11 @@ Index](https://pypi.org/project/pyks/) with:
 pip install pyks
 ```
 
-or the development version from [GitHub](https://github.com/)
-    with:
+or the development version from [GitHub](https://github.com/) with:
 
 ``` conda
 pip install git+https://github.com/JiaxiangBU/pyks
 ```
-
-## Examples
-
-1.  [examples1.ipynb](https://nbviewer.jupyter.org/urls/jiaxiangbu.github.io/pyks/examples1.ipynb)
-2.  [examples2.ipynb](https://nbviewer.jupyter.org/urls/jiaxiangbu.github.io/pyks/examples2.ipynb)
 
 ## Citations
 
