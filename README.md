@@ -99,7 +99,7 @@ project, you agree to abide by its terms.
 
 <h6 align="center">
 
-MIT \& [Jiaxiang Li](LICENSE.md)
+MIT \u00a9 [Jiaxiang Li](LICENSE.md)
 
 </h6>
 
