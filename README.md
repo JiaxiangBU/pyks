@@ -1,4 +1,9 @@
 
+# Title
+> summary
+
+
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # pyks
@@ -94,6 +99,206 @@ project, you agree to abide by its terms.
 
 <h6 align="center">
 
-MIT © [Jiaxiang Li](LICENSE.md)
+MIT \& [Jiaxiang Li](LICENSE.md)
 
 </h6>
+
+
+## Examples
+
+```python
+import pandas as pd
+import numpy as np
+```
+
+```python
+df1 = pd.read_csv('refs/two_class_example.csv')
+```
+
+```python
+from pyKS.ks import perf
+```
+
+```python
+perf(df1).chart()
+```
+
+    0.727689153693382
+    
+
+
+![png](docs/images/output_5_1.png)
+
+
+    The function `plot` is depreciated, use `perf.plot()`
+    
+
+
+    <Figure size 432x288 with 0 Axes>
+
+
+```python
+perf(df1).table()
+```
+
+    The function `summary` is depreciated, use `perf.table()`
+    
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>min_scr</th>
+      <th>max_scr</th>
+      <th>bads</th>
+      <th>goods</th>
+      <th>total</th>
+      <th>odds</th>
+      <th>bad_rate</th>
+      <th>ks</th>
+      <th>max_ks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.794262e-07</td>
+      <td>0.002773</td>
+      <td>50</td>
+      <td>0</td>
+      <td>50</td>
+      <td>0.00</td>
+      <td>100.00%</td>
+      <td>20.66</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.810221e-03</td>
+      <td>0.036310</td>
+      <td>49</td>
+      <td>1</td>
+      <td>50</td>
+      <td>0.02</td>
+      <td>98.00%</td>
+      <td>40.52</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.670582e-02</td>
+      <td>0.122027</td>
+      <td>43</td>
+      <td>7</td>
+      <td>50</td>
+      <td>0.16</td>
+      <td>86.00%</td>
+      <td>55.58</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.225460e-01</td>
+      <td>0.325715</td>
+      <td>37</td>
+      <td>13</td>
+      <td>50</td>
+      <td>0.35</td>
+      <td>74.00%</td>
+      <td>65.83</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3.269821e-01</td>
+      <td>0.655164</td>
+      <td>31</td>
+      <td>19</td>
+      <td>50</td>
+      <td>0.61</td>
+      <td>62.00%</td>
+      <td>71.27</td>
+      <td>&lt;----</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6.587248e-01</td>
+      <td>0.853443</td>
+      <td>22</td>
+      <td>28</td>
+      <td>50</td>
+      <td>1.27</td>
+      <td>44.00%</td>
+      <td>69.51</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>8.561391e-01</td>
+      <td>0.958957</td>
+      <td>7</td>
+      <td>43</td>
+      <td>50</td>
+      <td>6.14</td>
+      <td>14.00%</td>
+      <td>55.74</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>9.623505e-01</td>
+      <td>0.987179</td>
+      <td>1</td>
+      <td>49</td>
+      <td>50</td>
+      <td>49.00</td>
+      <td>2.00%</td>
+      <td>37.16</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9.875471e-01</td>
+      <td>0.997897</td>
+      <td>2</td>
+      <td>48</td>
+      <td>50</td>
+      <td>24.00</td>
+      <td>4.00%</td>
+      <td>19.38</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>9.979229e-01</td>
+      <td>0.999997</td>
+      <td>0</td>
+      <td>50</td>
+      <td>50</td>
+      <td>inf</td>
+      <td>0.00%</td>
+      <td>-0.00</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
